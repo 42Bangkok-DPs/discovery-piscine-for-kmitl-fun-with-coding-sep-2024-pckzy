@@ -1,0 +1,46 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    background-color: #1b0706;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+.btn {
+    background-color: #c8ae1e;
+    color: rgb(69, 43, 29);
+    padding: 20px 20px;
+    font-size: 28px;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    width: 160px;
+}
+
+.content a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 12px 16px;
+}
+
+.content a:hover {
+    background-color: #d8d8d8; 
+}
+
+.dropdown:hover .content {
+    display: block;
+}
