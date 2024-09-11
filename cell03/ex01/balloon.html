@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex01</title>
+    <style>
+        #balloon {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.1s;
+        }
+    </style>
+</head>
+<body>
+    <div id="balloon"></div>
+</body>
+</html>
+
+<script>
+    const resize = document.getElementById("balloon");
+    let currentSize = 200;
+    let color = ["red", "green", "blue"];
+    let colorIndex = 0;
+
+    resize.addEventListener("click", function() {
+        if (currentSize <= 410) {
+            currentSize += 10;
+        } else {
+            currentSize = 200;
+        }
+        balloon.style.width = currentSize + "px";
+        balloon.style.height = currentSize + "px";
+        colorIndex = (colorIndex + 1) % color.length;
+        balloon.style.backgroundColor = color[colorIndex];
+    });
+    resize.addEventListener("mouseleave", function() {
+        if (currentSize > 200) {
+            currentSize -= 5;
+            resize.style.width = currentSize + "px";
+            resize.style.height = currentSize + "px";
+            colorIndex = (colorIndex - 1 + color.length) % color.length;
+            balloon.style.backgroundColor = color[colorIndex];
+        }
+    });
+</script>
