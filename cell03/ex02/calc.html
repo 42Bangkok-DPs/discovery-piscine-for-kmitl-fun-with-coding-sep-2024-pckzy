@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex02</title>
+    <style>
+        body {
+            text-align: center;
+            padding-top: 50px;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+        .box {
+            display: inline-block;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid black;
+        }
+        input[type="field"], select {
+            padding: 10px;
+            margin: 15px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0a1941;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color:#002ead;
+            transition: 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Calculator
+        <form onsubmit="composite()">
+            <div>
+                <input type="field" id="fval" placeholder="Left operand"><br>
+                <select id="operator">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+            </div>
+            <input type="field" id="sval" placeholder="Right operand"><br>
+            <input type="submit" value="Try me!">
+          </form>
+    </div>
+</body>
+</html>
+
+<script>
+    function composite() {
+		const fval = parseInt(document.getElementById("fval").value);
+        const sval = parseInt(document.getElementById("sval").value);
+        const operator = document.getElementById('operator').value;
+
+        if (fval < 0 || sval < 0) {
+            alert('Error :(');
+            return false;
+        }
+
+        let result;
+        switch (operator) {
+            case '+':
+                result = fval + sval;
+                break;
+            case '-':
+                result = fval - sval;
+                break;
+            case '*':
+                result = fval * sval;
+                break;
+            case '/':
+                if (sval === 0) {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                }
+                result = fval / sval;
+                break;
+            case '%':
+                if (sval === 0) {
+                    alert("It's over 9000!");
+                    console.log("It's over 9000!");
+                    return;
+                }
+                result = fval % sval;
+                break;
+        }
+
+        alert(result);
+        console.log(result);
+        return true;
+	}
+    setInterval(() => {
+		alert('Please, use me...');
+	}, 30000);
+</script>
