@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex00</title>
+    <link rel="stylesheet" href="backgroound.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <button id="btn">Click me!</button>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        let currentSize = 12;
+        $('#btn').on('click', function () {
+            const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            $('body').css('background-color', randomColor);
+            currentSize += 5;
+            $(this).css('font-size', currentSize + 'px');
+        });
+    });
+</script>
