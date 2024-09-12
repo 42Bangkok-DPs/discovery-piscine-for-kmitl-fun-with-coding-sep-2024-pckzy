@@ -63,7 +63,7 @@
         const sval = parseInt(document.getElementById("sval").value);
         const operator = document.getElementById('operator').value;
 
-        if (fval < 0 || sval < 0) {
+        if (fval < 0 || sval < 0 || isNaN(fval) || isNaN(sval)) {
             alert('Error :(');
             return false;
         }
