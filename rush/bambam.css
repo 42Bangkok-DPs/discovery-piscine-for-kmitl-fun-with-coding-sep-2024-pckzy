@@ -1,0 +1,1104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #131313;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 10% 0% 0% 10%;
+}
+
+header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    padding: 1% 10%;
+    background-color: #131313;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    /* ถ้าไม่ใส่ position: relative; underline หัวข้อไม่ขึ้น */
+    position: relative;
+    font-family: 'Mukta', sans-serif;
+    font-size: 25px;
+    color: white;
+    font-weight: 800;
+    text-decoration: none;
+    margin: 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: white
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+.main {
+    margin-top: 4.1%;
+    width: 100%;
+    height: auto;
+}
+
+.block1 {
+    padding-top: 200px;
+    width: 100%;
+    height: 90vh;
+    background-color: #131313;
+    margin: 0 auto;
+}
+
+.greetings {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 70px;
+    padding: 2% 10%;
+    color: white;
+    padding: 30px 0px;
+    text-align: left;
+    margin-left: 20%;
+}
+
+.greetings-detail {
+    margin: 2% 23%;
+    padding-left: 2%;
+    font-family: "IM Fell Double Pica SC", serif;
+    color: white;
+    font-size: 40px;
+    border-left: 10px solid white;
+}
+
+.block2 {
+    display: block;
+    width: 80%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.row1 {
+    border: 1px solid #131313;
+    height: 12vh;
+    width: 100%;
+}
+
+.myname {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 80px;
+    line-height: 12vh;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.row2 {
+    display: flex;
+}
+
+.row3 {
+
+    display: flex;
+    justify-content: space-between;
+    height: 30vh;
+}
+
+.row2-right-top {
+    border: 1px solid #131313;
+    width: 100%;
+    height: 10vh;
+    background-color: #131313;
+}
+
+.experi {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: "Rubik Mono One", monospace;
+    font-size: 50px;
+}
+
+.row2-left {
+    background-image: url(bampict.png);
+    background-size: cover;
+    background-position: center;
+    width: 25%;
+}
+
+.row2-right {
+    border: 1px solid #131313;
+    width: 75%;
+}
+
+.row3-left {
+    border: 1px solid #131313;
+    width: 40%;
+}
+
+.row3-mid {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #131313;
+    width: 40%;
+}
+
+.row3-right {
+    border: 1px solid #131313;
+    width: 40%;
+
+}
+
+.row2-right-bot {
+    display: flex;
+    height: 30vh;
+    justify-content: space-between;
+}
+
+.row2-right-bot-left {
+    display: block;
+    position: relative;
+    border: 1px solid #131313;
+    width: 35%;
+
+}
+
+.row2-right-bot-mid {
+    display: block;
+    position: relative;
+    border: 1px solid #131313;
+    width: 35%;
+
+}
+
+.row2-right-bot-right {
+    display: block;
+    position: relative;
+    border: 1px solid #131313;
+    width: 35%;
+
+}
+
+.title {
+    font-family: "Rubik Mono One", monospace;
+    margin: 30px 70px 0px 70px;
+    font-size: 50px;
+    text-align: left;
+
+}
+
+.content {
+
+    font-family: "IM Fell Double Pica SC", serif;
+    margin: 7% 2% 0% 7%;
+    font-size: 50px;
+}
+
+.row3-mid-bot {
+
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 12% 20px 12%;
+    height: 32%;
+}
+
+#instra {
+    width: 100px;
+    transition: 0.2s;
+}
+
+#instra:hover {
+    transform: scale(1.5, 1.5);
+    transition: 0.2s;
+}
+
+#tiktok {
+    width: 100px;
+    transition: 0.2s;
+}
+
+#tiktok:hover {
+    transform: scale(1.5, 1.5);
+    transition: 0.2s;
+}
+
+#twitch {
+    width: 100px;
+    transition: 0.2s;
+}
+
+#twitch:hover {
+    transform: scale(1.5, 1.5);
+    transition: 0.2s;
+}
+
+.black-block {
+    bottom: 0;
+    width: 100%;
+    height: 41%;
+    background-color: #131313;
+}
+
+.row3-right {
+    background-image: url(compict.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 25%;
+}
+
+.space {
+    background-color: white;
+    width: 100%;
+    height: 10vh;
+}
+
+.arrow {
+    width: 100%;
+    height: 10vh;
+    font-size: 70px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.block3 {
+    display: block;
+    width: 80%;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #131313;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.ed-bg-title {
+    font-family: "Rubik Mono One", monospace;
+    font-size: 70px;
+    padding: 2% 10%;
+    color: white;
+    padding: 30px 0px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.ed-bg-block {
+    display: flex;
+    height: 60vh;
+}
+
+.ed-bg-left {
+    width: 50%;
+    margin: auto;
+}
+
+.ed-bg-left-info {
+    margin: 0% 17% 0% 17%;
+    font-family: "IM Fell Double Pica SC", serif;
+    color: white;
+    font-size: 30px;
+    text-align: left;
+}
+
+.ed-bg-right {
+    margin: auto;
+}
+
+#kuromi {
+    width: 400px;
+}
+
+/* responsive */
+@media (min-width: 320px) and (max-width: 374px) {
+    .myname {
+        line-height: 5vh;
+        font-size: 12px;
+    }
+
+    .row1 {
+        height: 5vh;
+    }
+
+    .title {
+        font-size: 20px;
+        margin: 2% 6%
+    }
+
+    .content {
+        font-size: 13px;
+        margin: 0.5% 7%
+    }
+
+    #instra {
+        width: 40px;
+    }
+
+    #tiktok {
+        width: 40px;
+    }
+
+    #twitch {
+        width: 40px;
+    }
+
+    .row3 {
+        height: 22vh;
+    }
+
+    .row2 {
+        display: block;
+
+
+    }
+
+    .experi {
+        margin-top: 4%;
+        font-size: 20px;
+    }
+
+    .row2-right-bot {
+        display: block;
+        /* background-color: lightgreen; */
+        width: 100%;
+        height: 70%;
+        padding: 5%;
+    }
+
+    .row2-right-bot-left {
+        width: 100%;
+    }
+
+    .row2-right-bot-mid {
+        width: 100%;
+    }
+
+    .row2-right-bot-right {
+        width: 100%;
+    }
+
+    .row2-left {
+        width: 100%;
+        height: 30vh;
+
+    }
+
+    .row2-right {
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    .row3 {
+        display: block;
+        height: 19vh;
+
+    }
+
+    .row3-left {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .row3-mid {
+        width: 100%;
+        height: 10vh;
+
+    }
+
+    .row3-right {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .row3-mid-bot {
+        margin: 2% 12% 20px 12%;
+    }
+
+    .greetings-detail {
+        font-size: 20px;
+        border-left: 3px solid white;
+    }
+
+    .greetings {
+        font-size: 30px;
+        margin-left: 20%;
+        margin-right: 20%;
+
+    }
+
+    .block1 {
+        padding-top: 120px;
+        height: 70vh;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+
+    .space {
+        display: none;
+    }
+
+    .arrow {
+        font-size: 50px;
+    }
+
+    .block1 {
+        width: 100%;
+        padding-top: 70px
+    }
+
+    .ed-bg-title {
+        font-size: 20px;
+    }
+
+    .ed-bg-left-info {
+        font-size: 20px;
+        margin: 0% 2% 0% 2%;
+    }
+
+    .ed-bg-left {
+        padding: 5%;
+        font-size: 20px;
+        width: 80%;
+
+    }
+
+    #kuromi {
+        margin-top: 10%;
+        width: 230px;
+    }
+
+    .ed-bg-block {
+        display: block;
+        height: 50vh;
+    }
+
+    .block3 {
+        margin-top: 120%;
+        height: 90vh;
+    }
+
+    .block2 {
+        height: 90vh;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+    .myname {
+        line-height: 5vh;
+        font-size: 12px;
+    }
+
+    .row1 {
+        height: 5vh;
+    }
+
+    .title {
+        font-size: 20px;
+        margin: 2% 6%
+    }
+
+    .content {
+        font-size: 15px;
+        margin: 0.5% 7%
+    }
+
+    #instra {
+        width: 40px;
+    }
+
+    #tiktok {
+        width: 40px;
+    }
+
+    #twitch {
+        width: 40px;
+    }
+
+    .row3 {
+        height: 22vh;
+    }
+
+    .row2 {
+        display: block;
+    }
+
+    .experi {
+        margin-top: 4%;
+        font-size: 20px;
+    }
+
+    .row2-right-bot {
+        display: block;
+        /* background-color: lightgreen; */
+        width: 100%;
+        height: 70%;
+        padding: 5%;
+    }
+
+    .row2-right-bot-left {
+        width: 100%;
+    }
+
+    .row2-right-bot-mid {
+        width: 100%;
+    }
+
+    .row2-right-bot-right {
+        width: 100%;
+    }
+
+    .row2-left {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .row2-right {
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    .row3 {
+        display: block;
+        height: 19vh;
+    }
+
+    .row3-left {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .row3-mid {
+        width: 100%;
+        height: 10vh;
+    }
+
+    .row3-right {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .row3-mid-bot {
+        margin: 2% 12% 20px 12%;
+    }
+
+    .greetings-detail {
+        font-size: 20px;
+        border-left: 3px solid white;
+    }
+
+    .greetings {
+        font-size: 30px;
+        margin-left: 20%;
+        margin-right: 20%;
+
+    }
+
+    .block1 {
+        padding-top: 80px;
+        height: 70vh;
+    }
+
+    nav a {
+        font-size: 17px;
+    }
+
+    .space {
+        display: none;
+    }
+
+    .arrow {
+        font-size: 50px;
+    }
+
+    .ed-bg-title {
+        font-size: 20px;
+    }
+
+    .ed-bg-left-info {
+        font-size: 20px;
+        margin: 0% 2% 0% 2%;
+    }
+
+    .ed-bg-left {
+        padding: 5%;
+        font-size: 20px;
+        width: 80%;
+
+    }
+
+    #kuromi {
+        margin-top: 10%;
+        width: 300px;
+    }
+
+    .ed-bg-block {
+        display: block;
+        height: 50vh;
+    }
+
+    .block3 {
+        margin-top: 110%;
+        height: 83vh;
+    }
+
+    .block2 {
+        height: 90vh;
+    }
+}
+
+
+@media (min-width: 425px) and (max-width: 767px) {
+    .myname {
+        font-size: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin: 2% 6%
+    }
+
+    .content {
+        font-size: 17px;
+        margin: 0.5% 7%
+    }
+
+    #instra {
+        width: 50px;
+    }
+
+    #tiktok {
+        width: 50px;
+    }
+
+    #twitch {
+        width: 50px;
+    }
+
+    .row3 {
+
+        height: 22vh;
+    }
+
+    .row2 {
+        display: block;
+    }
+
+    .experi {
+        margin-top: 4%;
+        font-size: 20px;
+    }
+
+    .row2-right-bot {
+        display: block;
+        width: 100%;
+        height: 70%;
+        padding: 5%;
+    }
+
+    .row2-right-bot-left {
+        width: 100%;
+    }
+
+    .row2-right-bot-mid {
+        width: 100%;
+    }
+
+    .row2-right-bot-right {
+        width: 100%;
+    }
+
+    .row2-left {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .row2-right {
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    .row3 {
+        display: block;
+        height: 19vh;
+
+    }
+
+    .row3-left {
+        width: 100%;
+        padding: 5%;
+    }
+
+    .row3-mid {
+        width: 100%;
+    }
+
+    .row3-right {
+        width: 100%;
+        height: 20vh;
+    }
+
+    .greetings-detail {
+        font-size: 20px;
+        border-left: 3px solid white;
+    }
+
+    .greetings {
+        font-size: 30px;
+        margin-left: 20%;
+        margin-right: 20%;
+
+    }
+
+    .block1 {
+        padding-top: 80px;
+        height: 70vh;
+    }
+
+    .space {
+        display: none;
+    }
+
+    .arrow {
+        font-size: 60px;
+    }
+
+    .block1 {
+        padding-top: 120px
+    }
+
+    .ed-bg-title {
+        font-size: 20px;
+    }
+
+    .ed-bg-left-info {
+        font-size: 20px;
+        margin: 0% 2% 0% 2%;
+    }
+
+    .ed-bg-left {
+        padding: 5%;
+        font-size: 20px;
+        width: 80%;
+    }
+
+    #kuromi {
+        margin-top: 10%;
+        width: 300px;
+    }
+
+    .ed-bg-block {
+        display: block;
+        height: 50vh;
+    }
+
+    .block3 {
+        margin-top: 130%;
+        height: 75vh;
+    }
+
+    .block2 {
+        height: 90vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .myname {
+        font-size: 30px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin: 2% 6%
+    }
+
+    .content {
+        font-size: 17px;
+        margin: 0.5% 7%
+    }
+
+    #instra {
+        width: 50px;
+    }
+
+    #tiktok {
+        width: 50px;
+    }
+
+    #twitch {
+        width: 50px;
+    }
+
+    .row3 {
+        height: 22vh;
+    }
+
+    .experi {
+        margin-top: 4%;
+        font-size: 20px;
+    }
+
+    .row2-right-bot {
+        display: block;
+        width: 100%;
+        height: 70%;
+    }
+
+    .row2-right-bot-left {
+        width: 100%;
+    }
+
+    .row2-right-bot-mid {
+        width: 100%;
+    }
+
+    .row2-right-bot-right {
+        width: 100%;
+    }
+
+    .row2-left {
+        width: 40%;
+    }
+
+    .row2-right {
+        border: 1px solid black;
+        width: 60%;
+    }
+
+    .row3 {
+        height: 19vh;
+    }
+
+    .greetings-detail {
+        font-size: 30px
+    }
+
+    .greetings {
+        font-size: 60px;
+        margin-left: 20%;
+        margin-right: 20%;
+
+    }
+
+    .block1 {
+        padding-top: 120px
+    }
+
+    .ed-bg-title {
+        font-size: 40px;
+    }
+
+    .ed-bg-left-info {
+        font-size: 20px;
+    }
+
+    #kuromi {
+        width: 250px;
+    }
+
+    .ed-bg-block {
+        height: 40vh;
+    }
+
+    .block3 {
+        height: 65vh;
+    }
+
+    .block2 {
+        height: 90vh;
+    }
+
+    .ed-bg-left-info {
+        margin: 0 7%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    .myname {
+        font-size: 40px;
+    }
+
+    .title {
+        font-size: 20px;
+        margin: 5% 15%
+    }
+
+    .content {
+        font-size: 17px;
+        margin: 1% 14%
+    }
+
+    #instra {
+        width: 70px;
+    }
+
+    #tiktok {
+        width: 70px;
+    }
+
+    #twitch {
+        width: 70px;
+    }
+
+    .row3 {
+        height: 22vh;
+    }
+
+    .experi {
+        font-size: 40px;
+    }
+
+    .greetings-detail {
+        font-size: 30px
+    }
+
+    .greetings {
+        margin-left: 20%;
+        margin-right: 20%;
+
+    }
+
+    .ed-bg-title {
+        font-size: 40px;
+    }
+
+    .ed-bg-left-info {
+        font-size: 25px;
+    }
+
+    #kuromi {
+        width: 300px;
+    }
+
+    .ed-bg-block {
+        height: 40vh;
+    }
+
+    .block3 {
+        height: 70vh;
+    }
+
+    .block2 {
+        height: 90vh;
+    }
+
+    .ed-bg-left-info {
+        margin: 0 7%;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+
+    .myname {
+        font-size: 50px;
+    }
+
+    .title {
+        font-size: 30px;
+        margin: 5% 15%
+    }
+
+    .content {
+        font-size: 17px;
+        margin: 2% 14%
+    }
+
+    .ed-bg-title {
+        font-size: 50px;
+    }
+
+    .ed-bg-left-info {
+        margin: 0 7%;
+    }
+}
+
+@media (min-width: 1440px) and (max-width: 1999px) {
+    .myname {
+        font-size: 50px;
+    }
+
+    .title {
+        font-size: 30px;
+        margin: 5% 15%
+    }
+
+    .content {
+        font-size: 18px;
+        margin: 2% 15%
+    }
+
+    .ed-bg-title {
+        font-size: 50px;
+    }
+
+    .ed-bg-title-info {
+        margin: 0 3%;
+    }
+
+    .ed-bg-left-info {
+        margin: 0 7%;
+    }
+}
+
+@media (min-width: 2000px) and (max-width: 2560px) {
+    .myname {
+        font-size: 100px;
+    }
+
+    .title {
+        font-size: 50px;
+        margin: 5% 15%
+    }
+
+    .content {
+        font-size: 28px;
+        margin: 2% 7%
+    }
+}
+
+@media (min-width: 2560px) {
+    .myname {
+        font-size: 100px;
+
+    }
+
+    .title {
+        font-size: 50px;
+        margin: 5% 15%
+    }
+
+    .content {
+        font-size: 35px;
+        margin: 2% 7%
+    }
+
+    .ed-bg-title {
+        font-size: 80px;
+    }
+
+    .ed-bg-left-info {
+        font-size: 60px;
+    }
+
+    #kuromi {
+
+        width: 700px;
+    }
+}
