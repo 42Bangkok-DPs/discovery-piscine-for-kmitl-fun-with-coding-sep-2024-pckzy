@@ -1,59 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ex01</title>
-    <style>
-        #balloon {
-            background-color: red;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: 0.1s;
-        }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
-<body>
-    <div id="balloon"></div>
-</body>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	</head>
+<style>
+	.circle {
+	height: 200px;
+	width:200px;
+	background-color: red;
+	border-radius: 50%;
+	display: inline-block;
+	}
+	
+</style>
+
+<div style="text-align:center">
+  <span class="circle" id ="Cir" onclick="composite()" onmouseleave="decomp()"></span>
+</div>
+
+	<script>
+		varri = 200;
+		Rvar = 5;
+		brute = ["green","blue","red"];
+		
+		function decomp(){
+			if (varri >= 200) {
+				varri -= 5;
+				$("#Cir").innerHeight(varri + "px");
+				$("#Cir").innerWidth(varri + "px");
+			}
+		}
+		
+		function composite(){
+				
+				if (varri <= 420) {
+				varri += 10;
+				$("#Cir").innerHeight(varri + "px");
+				$("#Cir").innerWidth(varri + "px");
+				$('#Cir').css('background-color', brute[varri%3]);
+				}
+				else
+				{
+					varri = 200;
+					$("#Cir").innerHeight(varri + "px");
+					$("#Cir").innerWidth(varri + "px");
+					$('#Cir').css('background-color', brute[varri%3]);
+					Rvar = Rvar - 1;
+					Rvar == 0 && $(location).attr("href", "https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+				}
+		}
+	</script>
 </html>
-
-<script>
-    $(document).ready(function () {
-        let currentSize = 200;
-        let color = ["red", "green", "blue"];
-        let colorIndex = 0;
-
-        $('#balloon').on('click', function () {
-            if (currentSize <= 410) {
-                currentSize += 10;
-            } else {
-                currentSize = 200;
-            }
-            $(this).css({
-                'width': currentSize + 'px',
-                'height': currentSize + 'px',
-                'background-color': (() => {
-                    colorIndex = (colorIndex + 1) % color.length;
-                    return color[colorIndex];
-                })()
-            });
-        });
-        $('#balloon').on('mouseleave', function () {
-            if (currentSize > 200) {
-                currentSize -= 5;
-                $(this).css({
-                    'width': currentSize + 'px',
-                    'height': currentSize + 'px',
-                    'background-color': (() => {
-                        colorIndex = (colorIndex - 1 + color.length) % color.length;
-                        return color[colorIndex];
-                    })()
-                });
-            }
-        });
-    });
-</script>
