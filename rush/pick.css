@@ -267,11 +267,11 @@ nav a:hover::before {
     }
     .info-card-content {
         flex-direction: row;
-        align-items: flex-start;
+        align-items: center;
     }
 
     .info-card-image {
-        margin-left: 25px;
+        margin-left: 15px;
         margin-bottom: 10px;
     }
 
@@ -304,7 +304,8 @@ nav a:hover::before {
     }
     .info-card-text h3, .info-card-text p {
         font-size: 1rem;
-        margin-top: 15%;
+        margin-top: 0;
+        margin-bottom: 10px;
     }
     .experience-card-content {
         flex-direction: column;
@@ -332,7 +333,21 @@ nav a:hover::before {
     }
     .contact-card-text h3 {
         font-size: 1rem;
-        line-height: 70px;
-        margin-top: 15%;
+        font-size: x-large;
+        margin: 0 4px;
+        margin-bottom: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-card-text h3 {
+        font-size: 1rem;
+        font-size: large;
+        margin: 0 1px;
+        margin-bottom: 11px;
+    }
+    
+    .info-card {
+        margin-bottom: 1px;
     }
 }
