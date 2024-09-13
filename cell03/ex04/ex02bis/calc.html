@@ -61,11 +61,12 @@
 <script>
     $(document).ready(function () {
         $('#calcForm').on('submit', function (e) {
+            e.preventDefault();
             const fval = parseInt($('#fval').val());
             const sval = parseInt($('#sval').val());
             const operator = $('#operator').val();
 
-            if (fval < 0 || sval < 0 || isNaN(fval) || isNaN(sval)) {
+            if (fval < 0 || sval < 0 || isNaN(fval) || isNaN(sval) || parseInt($('#fval').val()) != parseFloat($('#fval').val()) || parseInt($('#sval').val()) != parseFloat($('#sval').val())) {
                 alert('Error :(');
                 return false;
             }
