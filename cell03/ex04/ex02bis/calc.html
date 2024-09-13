@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,17 +12,21 @@
             font-size: xx-large;
             font-weight: bold;
         }
+
         .box {
             display: inline-block;
             padding: 15px;
             border-radius: 10px;
             border: 2px solid black;
         }
-        input[type="field"], select {
+
+        input[type="field"],
+        select {
             padding: 10px;
             margin: 15px;
             font-size: 16px;
         }
+
         input[type="submit"] {
             padding: 10px 20px;
             font-size: 16px;
@@ -30,13 +35,15 @@
             border: none;
             cursor: pointer;
         }
+
         input[type="submit"]:hover {
-            background-color:#002ead;
+            background-color: #002ead;
             transition: 0.2s;
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
     <div class="box">
         Calculator
@@ -53,50 +60,55 @@
             </div>
             <input type="field" id="sval" placeholder="Right operand"><br>
             <input type="submit" value="Try me!">
-          </form>
+        </form>
     </div>
 </body>
+
 </html>
 
 <script>
     $(document).ready(function () {
         $('#calcForm').on('submit', function (e) {
             e.preventDefault();
-            const fval = parseInt($('#fval').val());
-            const sval = parseInt($('#sval').val());
+
+            const fval = $('#fval').val().trim();
+            const sval = $('#sval').val().trim();
             const operator = $('#operator').val();
 
-            if (fval < 0 || sval < 0 || isNaN(fval) || isNaN(sval) || parseInt($('#fval').val()) != parseFloat($('#fval').val()) || parseInt($('#sval').val()) != parseFloat($('#sval').val())) {
-                alert('Error :(');
-                return false;
+            if (isNaN(fval) || isNaN(sval) || fval === "" || sval === "" || parseInt($('#fval').val()) != parseFloat($('#fval').val()) || parseInt($('#sval').val()) != parseFloat($('#sval').val())) {
+            alert('Error :(');
+            return false;
             }
+
+            const left = parseInt($('#fval').val());
+            const right = parseInt($('#sval').val());
 
             let result;
             switch (operator) {
                 case '+':
-                    result = fval + sval;
+                    result = left + right;
                     break;
                 case '-':
-                    result = fval - sval;
+                    result = left - right;
                     break;
                 case '*':
-                    result = fval * sval;
+                    result = left * right;
                     break;
                 case '/':
-                    if (sval === 0) {
+                    if (right === 0) {
                         alert("It's over 9000!");
                         console.log("It's over 9000!");
                         return;
                     }
-                    result = fval / sval;
+                    result = left / right;
                     break;
                 case '%':
-                    if (sval === 0) {
+                    if (right === 0) {
                         alert("It's over 9000!");
                         console.log("It's over 9000!");
                         return;
                     }
-                    result = fval % sval;
+                    result = left % right;
                     break;
             }
 
