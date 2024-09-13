@@ -81,6 +81,7 @@ nav a:hover::before {
     height: 250px;
     border-radius: 50%;
     margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .username {
@@ -266,9 +267,11 @@ nav a:hover::before {
     }
     .info-card-content {
         flex-direction: row;
+        align-items: flex-start;
     }
 
     .info-card-image {
+        margin-left: 25px;
         margin-bottom: 10px;
     }
 
@@ -277,10 +280,16 @@ nav a:hover::before {
         flex-direction: row;
         align-items: center;
         flex: 1 1 100%;
+        width: 100%;
         margin-bottom: 10px;
         text-align: left;
         max-width: none;
         justify-content: flex-start;
+    }
+    .info-card:hover {
+        background-color: rgb(15, 15, 16);
+        transform: scale(1.0);
+        transition: 0.2s;
     }
 
     .info-card img {
