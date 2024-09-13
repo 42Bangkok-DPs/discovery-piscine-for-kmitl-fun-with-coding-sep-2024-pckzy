@@ -1,13 +1,13 @@
 function saveTasks() {
     const tasks = $.map($('.task-item'), task => $(task).text());
     const expires = new Date(Date.now() + 86400000).toUTCString();
-    document.cookie = `tasks=${JSON.stringify(tasks)}; expires=${expires}; path=/`;
+    document.cookie = `tasks=${encodeURIComponent(JSON.stringify(tasks))}; expires=${expires}; path=/`;
 }
 
 function loadTasks() {
     const cookie = document.cookie.split('; ').find(row => row.startsWith('tasks='));
     if (cookie) {
-        const tasks = JSON.parse(cookie.split('=')[1]);
+        const tasks = JSON.parse(decodeURIComponent(cookie.split('=')[1]));
         $.each(tasks.reverse(), function (index, task) {
             addTask(task);
         });
