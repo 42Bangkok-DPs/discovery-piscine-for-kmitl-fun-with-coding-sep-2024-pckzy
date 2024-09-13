@@ -281,7 +281,7 @@ nav a:hover::before {
         align-items: center;
         flex: 1 1 100%;
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 1px;
         text-align: left;
         max-width: none;
         justify-content: flex-start;
@@ -345,9 +345,5 @@ nav a:hover::before {
         font-size: large;
         margin: 0 1px;
         margin-bottom: 11px;
-    }
-    
-    .info-card {
-        margin-bottom: 1px;
     }
 }
